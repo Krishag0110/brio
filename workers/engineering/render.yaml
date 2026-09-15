@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fde-weather-verifier
+    runtime: docker
+    dockerfilePath: ./workers/engineering/Verifier.Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: off
+    envVars:
+      - key: ENGINEERING_VERIFY_SECRET
+        sync: false
+      - key: WEATHER_ALLOWED_HOSTS
+        sync: false
+      - key: WEATHER_ACCEPT_SIGNED_DEPLOYMENT_HOSTS
+        value: "true"
+      - key: VERCEL_AUTOMATION_BYPASS_SECRET
+        sync: false
