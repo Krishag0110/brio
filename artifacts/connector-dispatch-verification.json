@@ -1,0 +1,17 @@
+{
+  "sourceRevision": "6981750",
+  "verifiedAt": "2026-09-13T22:10:08.037972+00:00",
+  "unitIntegrationExecution": {
+    "files": 37,
+    "passed": 530
+  },
+  "browser": {
+    "passed": 22,
+    "duration": "1.1m"
+  },
+  "lint": "passed",
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "redditLiveEnabled": false,
+  "liveCustomerToReplyCompleted": false
+}

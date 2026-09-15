@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-13T22:21:03.042Z",
+  "url": "https://resilient-perch-131.convex.site/slack/interactions",
+  "httpStatus": 403,
+  "result": "slack_context_denied",
+  "signatureAccepted": true,
+  "nonActionRejected": true,
+  "messageSent": false,
+  "approvalCreated": false
+}

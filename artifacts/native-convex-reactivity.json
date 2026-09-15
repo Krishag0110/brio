@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-09-13T20:27:47.750Z",
+  "target": "existing local backend http://127.0.0.1:3210",
+  "sdkVersion": "1.45.0",
+  "transport": "ConvexClient.onUpdate over WebSocket",
+  "passed": true,
+  "initialRevision": 6,
+  "committedRevision": 7,
+  "deliveredRevision": 7,
+  "receivedUpdates": [
+    {
+      "revision": 6,
+      "receivedAt": 1789331267669
+    },
+    {
+      "revision": 7,
+      "receivedAt": 1789331267735
+    }
+  ],
+  "snapshotReturnValidatorPassed": true,
+  "liveDemoCommandRejected": true,
+  "ledgerUnchanged": true,
+  "mutation": "budget_commit with the existing infrastructure amount; audit-only change",
+  "infrastructureCommittedUsd": 1,
+  "settledModelUsd": 0.013440000000000002,
+  "unknownBillingReservedUsd": 0.009157,
+  "modelCallsMade": 0,
+  "externalProviderCallsMade": 0,
+  "publicMessagesSent": 0
+}

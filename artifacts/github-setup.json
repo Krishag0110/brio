@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-09-13T20:07:39.367Z",
+  "repository": "Aarush-Dubey/hackathon",
+  "target": "Aarush-Dubey/hackathon-weather",
+  "weatherBaseline": "e8ab2824ec926a6ba60a088bbd84c935f8670cf8",
+  "sshReadVerified": true,
+  "environmentBranch": "main",
+  "configured": [
+    "WEATHER_REPO_READ_SSH_KEY",
+    "WEATHER_BASELINE_SHA",
+    "ENGINEERING_GRANT_SECRET",
+    "ENGINEERING_CALLBACK_SECRET",
+    "WEATHER_TARGET_REPOSITORY",
+    "WEATHER_DEFAULT_BRANCH",
+    "WEATHER_PR_TOKEN"
+  ],
+  "pending": [
+    "WEATHER_CHECKS_APP_ID",
+    "WEATHER_CHECKS_APP_PRIVATE_KEY",
+    "CONVEX_SITE_URL",
+    "CODING_SANDBOX_IMAGE"
+  ],
+  "weatherBaselineForCI": "a96c50ee70b0a97171b03cde8ea10df6a2f008c8",
+  "weatherBunBranch": "codex/use-bun",
+  "weatherBunMergePending": true
+}

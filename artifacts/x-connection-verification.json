@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-13T22:02:31.662944+00:00",
+  "intendedHandle": "Vinaychamoc5",
+  "verifiedHandle": "Vinaychamoc5",
+  "authenticatedProfileHref": "/Vinaychamoc5",
+  "importHttpStatus": 200,
+  "connection": {
+    "account": "Vinaychamoc5",
+    "detail": "Identity verified; platform automation permission remains pending. Manual fallback available.",
+    "id": "x",
+    "lastCheckedAt": "2026-09-13T22:02:30.725Z",
+    "paused": false,
+    "platform": "x",
+    "status": "access_pending"
+  },
+  "wrongAccountSessionRemoved": true,
+  "platformPermissionVerified": false,
+  "postsSent": false
+}

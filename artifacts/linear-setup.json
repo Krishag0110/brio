@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-09-13T21:04:38.328Z",
+  "operation": "read-only metadata lookup",
+  "team": "Drizzle",
+  "teamKey": "DRI",
+  "teamId": "c8ac7ace-7ab8-40ec-b148-d7c50b82ae14",
+  "completedState": "Done",
+  "completedStateId": "bdafdb72-896e-4de1-abfb-f70033fdf51a",
+  "httpResult": "success",
+  "initialFailure": "HTTP400 INPUT_ERROR: Query too complex",
+  "fix": "Separate cursor-paginated team and state queries",
+  "issuesCreated": 0,
+  "issuesUpdated": 0,
+  "hostedConvexConfigured": false,
+  "localConvexConfigured": true,
+  "localConvexTarget": "http://127.0.0.1:3210"
+}

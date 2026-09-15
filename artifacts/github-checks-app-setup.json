@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-13T22:04:39.578Z",
+  "appId": 4934302,
+  "slug": "brio-mkc",
+  "owner": "Aarush-Dubey",
+  "keyMatched": true,
+  "permissions": {
+    "checks": "write",
+    "metadata": "read"
+  },
+  "installations": [
+    {
+      "id": 161471754,
+      "account": "Aarush-Dubey",
+      "repositorySelection": "selected",
+      "permissions": {
+        "checks": "write",
+        "metadata": "read"
+      },
+      "suspended": false
+    }
+  ],
+  "configured": true,
+  "repository": "Aarush-Dubey/hackathon-weather",
+  "shortLivedTokenMintVerified": true,
+  "probeTokenRevoked": true
+}

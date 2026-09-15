@@ -1,0 +1,16 @@
+{
+  "testedAt": "2026-09-14",
+  "model": "gpt-5-mini",
+  "mode": "live_model_test_only",
+  "path": "CLI internal action -> Convex Agent -> OpenAI -> durable budget settlement",
+  "actualUsd": 0.000159,
+  "approvedForPublication": false,
+  "reservationId": "cost_mu07tdj4_3",
+  "threadId": "m97e9f28t4mx0ys0w9symgqbs58eb9xm",
+  "text": "Tell the clouds to stop copying each other's homework \u2014 forecast says they're planning a pop quiz of sprinkles!",
+  "limitations": [
+    "Single bounded structured-generation test",
+    "No public post or deployment",
+    "No full live persona evaluation or live engineering run"
+  ]
+}

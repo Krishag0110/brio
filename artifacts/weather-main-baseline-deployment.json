@@ -1,0 +1,614 @@
+{
+  "checkedAt": "2026-09-13T22:24:49.174621+00:00",
+  "controller": {
+    "repository": "Aarush-Dubey/hackathon",
+    "mainSha": "8a7636e2709d039773afa73857e6cb66f08a7d6f"
+  },
+  "bootstrap": {
+    "runId": 34786278162,
+    "url": "https://github.com/Aarush-Dubey/hackathon/actions/runs/34786278162",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "validate-bootstrap",
+        "conclusion": "success"
+      },
+      {
+        "name": "attach-bootstrap-check",
+        "conclusion": "success"
+      }
+    ],
+    "receipt": {
+      "kind": "reviewed_bun_bootstrap",
+      "repository": "Aarush-Dubey/hackathon-weather",
+      "pullNumber": 1,
+      "baseSha": "e8ab2824ec926a6ba60a088bbd84c935f8670cf8",
+      "headSha": "a96c50ee70b0a97171b03cde8ea10df6a2f008c8",
+      "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "controllerSha": "8a7636e2709d039773afa73857e6cb66f08a7d6f",
+      "workflowRunId": "34786278162",
+      "completedAt": "2026-09-13T22:17:37.700Z",
+      "checks": {
+        "sourceScope": true,
+        "bunFrozenInstall": true,
+        "build": true,
+        "typecheck": true,
+        "protectedBaseline": true
+      },
+      "weatherQa": {
+        "status": "failed",
+        "seededDefectReproduced": true,
+        "identityPassed": true,
+        "checkCount": 34
+      }
+    }
+  },
+  "protectedCheck": {
+    "id": 103802492064,
+    "name": "Protected weather",
+    "headSha": "a96c50ee70b0a97171b03cde8ea10df6a2f008c8",
+    "conclusion": "success",
+    "appId": 4934302,
+    "detailsUrl": "https://github.com/Aarush-Dubey/hackathon/actions/runs/34786278162"
+  },
+  "weatherPullRequest": {
+    "headRefOid": "a96c50ee70b0a97171b03cde8ea10df6a2f008c8",
+    "mergeCommit": {
+      "oid": "161835dba251f9739d25194ec21db0f2461df989"
+    },
+    "mergedAt": "2026-09-13T22:18:36Z",
+    "state": "MERGED",
+    "url": "https://github.com/Aarush-Dubey/hackathon-weather/pull/1",
+    "mergeMethod": "merge",
+    "adminOverride": false,
+    "branchProtectionChanged": false
+  },
+  "source": {
+    "parents": [
+      "e8ab2824ec926a6ba60a088bbd84c935f8670cf8",
+      "a96c50ee70b0a97171b03cde8ea10df6a2f008c8"
+    ],
+    "sha": "161835dba251f9739d25194ec21db0f2461df989",
+    "tree": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+    "trackedArchive": true,
+    "temperatureSourceUnchangedFromReviewedBootstrap": true,
+    "localCheckoutPreserved": true
+  },
+  "vercel": {
+    "projectId": "prj_JMcbLuRjEldJZrJCyIi1c4mhV1tg",
+    "teamId": "team_7VtoXeQBK9yErObDrQynLY3P",
+    "projectName": "mend-weather",
+    "autoAssignCustomDomains": false,
+    "productionPublicEnvironmentNamesVerified": true,
+    "deploymentIdentityVerified": true,
+    "environment": {
+      "WEATHER_RUN_ID": "seed-main-2026-09-14",
+      "WEATHER_CANDIDATE_ID": "seed-baseline-main",
+      "WEATHER_HEAD_SHA": "161835dba251f9739d25194ec21db0f2461df989",
+      "WEATHER_TREE_DIGEST": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "WEATHER_TRUSTED_TEST_REVISION": "weather-protected-v1",
+      "WEATHER_BUILD_CONFIG_REVISION": "weather-build-v1",
+      "WEATHER_DEPLOYMENT_MODE": "live"
+    },
+    "deployment": {
+      "id": "dpl_2j3VMkCbdSJtAh565FdkXpu76PGK",
+      "url": "https://mend-weather-et10r3fgg-avichal-dwivedis-projects.vercel.app",
+      "readyState": "READY",
+      "target": "production",
+      "metadata": {
+        "runId": "seed-main-2026-09-14",
+        "candidateId": "seed-baseline-main",
+        "headSha": "161835dba251f9739d25194ec21db0f2461df989",
+        "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+        "trustedTestRevision": "weather-protected-v1",
+        "buildConfigRevision": "weather-build-v1"
+      }
+    },
+    "productionUrl": "https://mend-weather.vercel.app",
+    "previousDeploymentId": "dpl_6H4azf4uUDKVUAetoQeGtfFyp6YK",
+    "productionTrafficUnchangedUntilPromotion": true,
+    "promotionVerified": true
+  },
+  "stagedVersion": {
+    "httpStatus": 200,
+    "url": "https://mend-weather-et10r3fgg-avichal-dwivedis-projects.vercel.app/api/version",
+    "provenance": {
+      "schemaVersion": 1,
+      "runId": "seed-main-2026-09-14",
+      "candidateId": "seed-baseline-main",
+      "headSha": "161835dba251f9739d25194ec21db0f2461df989",
+      "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "trustedTestRevision": "weather-protected-v1",
+      "buildConfigRevision": "weather-build-v1",
+      "mode": "live"
+    }
+  },
+  "stagedBrowser": {
+    "suiteVersion": "weather-protected-v1",
+    "runId": "weather-main-stage-2026-09-14",
+    "url": "https://mend-weather-et10r3fgg-avichal-dwivedis-projects.vercel.app",
+    "mode": "live",
+    "timestamp": 1789338033052,
+    "identityPassed": true,
+    "checks": [
+      {
+        "name": "default Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 1 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 1 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 2 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 2 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 3 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 3 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 1 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 1 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 2 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 2 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 3 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 3 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "extreme-cold Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 1 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 1 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 2 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 2 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 3 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 3 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "boiling Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 1 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 1 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 2 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 2 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 3 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 3 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "reload/default unit",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      }
+    ],
+    "screenshots": [
+      "weather-main-stage-2026-09-14-20c-toggle.png",
+      "weather-main-stage-2026-09-14-reload.png"
+    ],
+    "status": "failed",
+    "seededDefectReproduced": true,
+    "provenance": {
+      "schemaVersion": 1,
+      "runId": "seed-main-2026-09-14",
+      "candidateId": "seed-baseline-main",
+      "headSha": "161835dba251f9739d25194ec21db0f2461df989",
+      "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "trustedTestRevision": "weather-protected-v1",
+      "buildConfigRevision": "weather-build-v1",
+      "mode": "live"
+    },
+    "identityAssurance": "expected_matches"
+  },
+  "productionVersion": {
+    "httpStatus": 200,
+    "url": "https://mend-weather.vercel.app/api/version",
+    "provenance": {
+      "schemaVersion": 1,
+      "runId": "seed-main-2026-09-14",
+      "candidateId": "seed-baseline-main",
+      "headSha": "161835dba251f9739d25194ec21db0f2461df989",
+      "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "trustedTestRevision": "weather-protected-v1",
+      "buildConfigRevision": "weather-build-v1",
+      "mode": "live"
+    }
+  },
+  "productionBrowser": {
+    "suiteVersion": "weather-protected-v1",
+    "runId": "weather-main-production-2026-09-14",
+    "url": "https://mend-weather.vercel.app",
+    "mode": "live",
+    "timestamp": 1789338070980,
+    "identityPassed": true,
+    "checks": [
+      {
+        "name": "default Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 1 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 1 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 2 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 2 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "pleasant repeat 3 Celsius",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "pleasant repeat 3 Fahrenheit",
+        "expected": "68\u00b0F",
+        "actual": "20\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 1 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 1 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 2 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 2 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "freezing repeat 3 Celsius",
+        "expected": "0\u00b0C",
+        "actual": "0\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "freezing repeat 3 Fahrenheit",
+        "expected": "32\u00b0F",
+        "actual": "0\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "extreme-cold Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 1 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 1 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 2 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 2 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 3 Celsius",
+        "expected": "-40\u00b0C",
+        "actual": "-40\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "extreme-cold repeat 3 Fahrenheit",
+        "expected": "-40\u00b0F",
+        "actual": "-40\u00b0F",
+        "passed": true
+      },
+      {
+        "name": "boiling Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 1 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 1 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 2 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 2 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "boiling repeat 3 Celsius",
+        "expected": "100\u00b0C",
+        "actual": "100\u00b0C",
+        "passed": true
+      },
+      {
+        "name": "boiling repeat 3 Fahrenheit",
+        "expected": "212\u00b0F",
+        "actual": "100\u00b0F",
+        "passed": false
+      },
+      {
+        "name": "reload/default unit",
+        "expected": "20\u00b0C",
+        "actual": "20\u00b0C",
+        "passed": true
+      }
+    ],
+    "screenshots": [
+      "weather-main-production-2026-09-14-20c-toggle.png",
+      "weather-main-production-2026-09-14-reload.png"
+    ],
+    "status": "failed",
+    "seededDefectReproduced": true,
+    "provenance": {
+      "schemaVersion": 1,
+      "runId": "seed-main-2026-09-14",
+      "candidateId": "seed-baseline-main",
+      "headSha": "161835dba251f9739d25194ec21db0f2461df989",
+      "treeDigest": "2fc58d5c57da18d60ff7ece9952faf273117f22d",
+      "trustedTestRevision": "weather-protected-v1",
+      "buildConfigRevision": "weather-build-v1",
+      "mode": "live"
+    },
+    "identityAssurance": "expected_matches"
+  },
+  "expectedFdeBaseSha": "161835dba251f9739d25194ec21db0f2461df989",
+  "fdeBaseShaUpdate": {
+    "state": "confirmed-by-parent-agent",
+    "targets": [
+      "local environment",
+      "private hosted bundle",
+      "production Convex resilient-perch-131"
+    ]
+  },
+  "remainingVerification": [
+    "A current signed engineering Build must still prove GitHub OIDC image pull and complete candidate execution."
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "verifiedAt": "2026-09-13T22:22:06.005773+00:00",
+  "projectId": "mend-hackathon-260914",
+  "projectNumber": "428020372764",
+  "region": "us-central1",
+  "cloudBuildId": "569f3b8b-c458-490d-bf73-1d9775c4bc86",
+  "cloudBuildStatus": "SUCCESS",
+  "budgetPolicyCreated": false,
+  "secretNames": [
+    "mend-social-grant",
+    "mend-social-callback",
+    "mend-social-encryption",
+    "mend-verifier-signing"
+  ],
+  "services": [
+    {
+      "service": "mend-weather-verifier",
+      "origin": "https://mend-weather-verifier-ajmx2yigqq-uc.a.run.app",
+      "worker": "verifier",
+      "revision": "mend-weather-verifier-00003-s98",
+      "imageDigest": "sha256:f15cf144092f0acbb686d259df2a51812eeb0499129528c5c87c5fe0445530eb",
+      "serviceAccount": "mend-verifier-runtime@mend-hackathon-260914.iam.gserviceaccount.com",
+      "containerConcurrency": 1,
+      "timeoutSeconds": 180,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "2Gi"
+        }
+      },
+      "setupPending": false,
+      "readyForJobs": true,
+      "probes": [
+        {
+          "method": "GET",
+          "path": "/health",
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "implementation": "protected-weather-v1",
+            "configuredHosts": 1,
+            "busy": false
+          }
+        }
+      ],
+      "scaling": {
+        "autoscaling.knative.dev/maxScale": "100",
+        "run.googleapis.com/client-name": "gcloud",
+        "run.googleapis.com/client-version": "584.0.0",
+        "run.googleapis.com/cpu-throttling": "true",
+        "run.googleapis.com/execution-environment": "gen2",
+        "run.googleapis.com/startup-cpu-boost": "true"
+      },
+      "image": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/verifier@sha256:f15cf144092f0acbb686d259df2a51812eeb0499129528c5c87c5fe0445530eb",
+      "browserVerified": true,
+      "note": "Fresh merged weather main verified through cloud Chromium: exact deployment identity and intended seeded defect reproduced."
+    },
+    {
+      "service": "mend-social-worker",
+      "origin": "https://mend-social-worker-ajmx2yigqq-uc.a.run.app",
+      "worker": "social",
+      "revision": "mend-social-worker-00004-77f",
+      "imageDigest": "sha256:681914f5e626c56db91a7a25e0edb7e63b69672575d4ae5f1c8b38a7054280dc",
+      "serviceAccount": "mend-social-runtime@mend-hackathon-260914.iam.gserviceaccount.com",
+      "containerConcurrency": 1,
+      "timeoutSeconds": 180,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "2Gi"
+        }
+      },
+      "setupPending": false,
+      "readyForJobs": true,
+      "probes": [
+        {
+          "method": "GET",
+          "path": "/health",
+          "status": 200,
+          "body": {
+            "status": "ok",
+            "implementation": "experimental",
+            "queue": "convex",
+            "livePermission": "configured_unverified"
+          }
+        }
+      ],
+      "scaling": {
+        "autoscaling.knative.dev/maxScale": "1",
+        "autoscaling.knative.dev/minScale": "1",
+        "run.googleapis.com/client-name": "gcloud",
+        "run.googleapis.com/client-version": "584.0.0",
+        "run.googleapis.com/cpu-throttling": "false",
+        "run.googleapis.com/execution-environment": "gen2",
+        "run.googleapis.com/startup-cpu-boost": "true"
+      },
+      "image": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/social@sha256:681914f5e626c56db91a7a25e0edb7e63b69672575d4ae5f1c8b38a7054280dc",
+      "browserVerified": true,
+      "note": "Vinaychamoc5 session revalidated. Automatic posting enabled by explicit account-owner instruction; external platform approval not independently verified. Background polling off; Reddit disabled."
+    }
+  ],
+  "remaining": [
+    "Exercise real engineer Build through GitHub OIDC sandbox pull",
+    "Exercise human marketer Go, release verification and approved reply receipt"
+  ],
+  "sourceRevision": "6981750"
+}

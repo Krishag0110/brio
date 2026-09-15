@@ -1,0 +1,72 @@
+{
+  "source": "persisted_agent_messages",
+  "taskId": "job_mu08x9gf_1b",
+  "recovered": [
+    {
+      "threadId": "m971wdt3g5saam8b4s9a02a1p58ebh6n",
+      "title": "validator:policy-evaluation:job_mu08x9gf_1b",
+      "messages": [
+        {
+          "status": "success",
+          "content": "{\"results\":[{\"id\":\"factual-1\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true},{\"id\":\"factual-2\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true},{\"id\":\"factual-3\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true},{\"id\":\"factual-4\",\"allow\":true,\"personaFits\":true,\"unsupportedClaim\":false},{\"id\":\"factual-5\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true},{\"id\":\"factual-6\",\"allow\":true,\"personaFits\":true,\"unsupportedClaim\":false},{\"id\":\"factual-7\",\"allow\":true,\"personaFits\":true,\"unsupportedClaim\":false},{\"id\":\"factual-8\",\"allow\":true,\"personaFits\":true,\"unsupportedClaim\":false},{\"id\":\"factual-9\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true},{\"id\":\"factual-10\",\"allow\":false,\"personaFits\":true,\"unsupportedClaim\":true}]}",
+          "usage": {
+            "cacheWriteInputTokens": 0,
+            "cachedInputTokens": 0,
+            "completionTokens": 236,
+            "nonCachedInputTokens": 1540,
+            "promptTokens": 1540,
+            "raw": {
+              "input_tokens": 1540,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 236,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1776
+            },
+            "reasoningTokens": 0,
+            "textOutputTokens": 236,
+            "totalTokens": 1776
+          },
+          "model": "gpt-5-mini"
+        }
+      ]
+    },
+    {
+      "threadId": "m974z12k4vs5nar8fb05ejet198eabkm",
+      "title": "writer:policy-evaluation:job_mu08x9gf_1b",
+      "messages": [
+        {
+          "status": "success",
+          "content": "{\"results\":[{\"id\":\"factual-1\",\"decision\":\"review_required\",\"draft\":\"Hey — looks like you’re seeing 20°C shown as 20°F. We shouldn’t be showing the same number for different units. I’m flagging this for the team to investigate and will include the sample conversion we use for verification: 20°C = 68°F. Can a\",\"reason\":\"Temperature-conversion symptom; factual support and fixing claims require human review and verification.\"},{\"id\":\"factual-2\",\"decision\":\"review_required\",\"draft\":\"Thanks for the report — a broken unit label is a UI issue we need to verify. I’ve noted it for triage. For reference during investigation: 20°C = 68°F. Please tell us which screen and app version so we can reproduce.\",\"reason\":\"UI/label issues require human review and additional context; factual confirmation must be verified by staff.\"},{\"id\":\"factual-3\",\"decision\":\"review_required\",\"draft\":\"Sorry about that — we take bug reports seriously. I’ve flagged this for the engineering team to investigate. As a test case they can use: 20°C = 68°F. Please include steps to reproduce and your app version.\",\"reason\":\"Bug reports require human review and repro details; assistant must not claim fixes.\"},{\"id\":\"factual-4\",\"decision\":\"eligible\",\"draft\":\"You can avoid the conversion bug for now by switching the unit in Settings to Celsius (if it’s currently Fahrenheit) and restarting the app. If that doesn’t help, toggle the unit back and forth once more. For verification when reporting: 20\",\"reason\":\"Request asks for workaround/instructions; allowed for autonomous engagement with benign steps. Factual claims limited to demo conversion.\"},{\"id\":\"factual-5\",\"decision\":\"review_required\",\"draft\":\"Thanks — historical incorrect temperature display should be checked by the team. I’ve logged it for investigation and included a sample conversion for verification: 20°C = 68°F. Please share when you first noticed it and any screenshots.\",\"reason\":\"Claims about past incorrect behavior need human review and evidence before action.\"},{\"id\":\"factual-6\",\"decision\":\"eligible\",\"draft\":\"To view Celsius, open Settings → Units and select Celsius, then restart the app if needed. If you still see Fahrenheit, try toggling units once more. Example conversion for reference: 20°C = 68°F.\",\"reason\":\"Instructional request; safe to answer autonomously with simple steps and demo conversion.\"},{\"id\":\"factual-7\",\"decision\":\"eligible\",\"draft\":\"Choose the unit that matches your preference (Celsius for metric, Fahrenheit for imperial). Set it in Settings → Units. If you travel, pick the local convention. Demo conversion: 20°C = 68°F.\",\"reason\":\"General instructions and recommendation are safe for autonomous response.\"},{\"id\":\"factual-8\",\"decision\":\"eligible\",\"draft\":\"A quick workaround: change Units in Settings to the other option, then switch back and restart the app — that often clears display glitches. Use this test conversion when reporting: 20°C = 68°F.\",\"reason\":\"Workaround advice is non-sensitive and allowed to be provided autonomously.\"},{\"id\":\"factual-9\",\"decision\":\"review_required\",\"draft\":\"If you need a safe setting until we investigate, set Units to Celsius (or the unit you trust) and avoid automatic-location-based unit switches. I’ve flagged this for the team to confirm. Sample conversion for verification: 20°C = 68°F.\",\"reason\":\"Advice involving safety preferences or product settings tied to ongoing investigation should be reviewed by human team members.\"},{\"id\":\"factual-10\",\"decision\":\"review_required\",\"draft\":\"Thanks for checking — I don’t have confirmation that a fix has shipped. I’ve escalated this to the release team to verify and will follow up. For their verification: 20°C = 68°F.\",\"reason\":\"Status of fixes and releases requires authoritative confirmation from humans; assistant must not claim a shipped fix.\"}]}",
+          "usage": {
+            "cacheWriteInputTokens": 0,
+            "cachedInputTokens": 0,
+            "completionTokens": 848,
+            "nonCachedInputTokens": 732,
+            "promptTokens": 732,
+            "raw": {
+              "input_tokens": 732,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 848,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1580
+            },
+            "reasoningTokens": 0,
+            "textOutputTokens": 848,
+            "totalTokens": 1580
+          },
+          "model": "gpt-5-mini"
+        }
+      ]
+    }
+  ]
+}

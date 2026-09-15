@@ -1,0 +1,54 @@
+{
+  "testedAt": "2026-09-13T19:52:41.882Z",
+  "mode": "local_durable_workflow_real_model",
+  "result": {
+    "blockingReason": "execution_failed",
+    "caseId": "case_mu08drw5_b",
+    "classification": "actionable_defect",
+    "costs": [
+      {
+        "caseId": "case_mu08drw5_b",
+        "createdAt": 1789329160431,
+        "id": "cost_mu08dsdr_f",
+        "maximumUsd": 0.004581,
+        "status": "unknown"
+      }
+    ],
+    "phase": "TRIAGING",
+    "publications": 0,
+    "tasks": [
+      {
+        "error": "execution_failed",
+        "id": "job_mu08drw5_c",
+        "kind": "triage",
+        "status": "failed",
+        "workflowId": "jd7bf2vps39983d2e7zt4h3p3x8eb5kr"
+      }
+    ]
+  },
+  "interruptedAttempt": {
+    "blockingReason": "execution_failed",
+    "caseId": "case_mu082lmt_5",
+    "classification": "actionable_defect",
+    "costs": [
+      {
+        "caseId": "case_mu082lmt_5",
+        "createdAt": 1789328764773,
+        "id": "cost_mu085b39_9",
+        "maximumUsd": 0.004576,
+        "status": "unknown"
+      }
+    ],
+    "phase": "TRIAGING",
+    "publications": 0,
+    "tasks": [
+      {
+        "error": "execution_failed",
+        "id": "job_mu082lmt_6",
+        "kind": "triage",
+        "status": "failed",
+        "workflowId": "jd7ecvc2fy1wc0t6hhdjxqyw298ebqm7"
+      }
+    ]
+  }
+}

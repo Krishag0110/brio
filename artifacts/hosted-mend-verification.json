@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-09-13T22:22:32.173Z",
+  "base": "https://mend-hackathon.vercel.app",
+  "unauthenticatedPage": {
+    "status": 307,
+    "location": "/access"
+  },
+  "unauthenticatedApi": 403,
+  "wrongCode": {
+    "status": 403,
+    "cookie": false
+  },
+  "correctCode": {
+    "status": 200,
+    "httpOnly": true,
+    "secure": true
+  },
+  "authenticatedApi": 200,
+  "mode": "live",
+  "cases": 0,
+  "revision": 6,
+  "readiness": [
+    {
+      "detail": "App-scoped key present; gpt-5-mini only. Access is verified separately.",
+      "id": "openai",
+      "label": "OpenAI",
+      "status": "configured"
+    },
+    {
+      "detail": "Local access or a shared code; Slack user IDs govern live approvals.",
+      "id": "access",
+      "label": "Workspace access",
+      "status": "configured"
+    },
+    {
+      "detail": "Durable state and workflow execution.",
+      "id": "convex",
+      "label": "Convex",
+      "status": "configured"
+    },
+    {
+      "detail": "Signed approvals; no public action without authority.",
+      "id": "slack",
+      "label": "Slack",
+      "status": "configured"
+    },
+    {
+      "detail": "Canonical engineering tickets.",
+      "id": "linear",
+      "label": "Linear",
+      "status": "configured"
+    },
+    {
+      "detail": "Scoped runner and protected checks.",
+      "id": "github",
+      "label": "GitHub",
+      "status": "configured"
+    },
+    {
+      "detail": "Staged deployment and live verification.",
+      "id": "vercel",
+      "label": "Vercel",
+      "status": "configured"
+    },
+    {
+      "detail": "Isolated X sessions and confirmed receipts.",
+      "id": "worker",
+      "label": "Browser worker",
+      "status": "configured"
+    },
+    {
+      "detail": "Conditional API permission.",
+      "id": "reddit",
+      "label": "Reddit",
+      "status": "missing"
+    }
+  ]
+}

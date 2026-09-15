@@ -1,0 +1,51 @@
+{
+  "testedAt": "2026-09-13T20:02:15.317Z",
+  "mode": "local_durable_workflow_real_gpt5mini",
+  "runId": "smoke-nullable-triage-mu08q0tr",
+  "result": {
+    "blockingReason": null,
+    "caseId": "case_mu08q0tt_h",
+    "classification": "actionable_defect",
+    "costs": [
+      {
+        "actualUsd": 0.000359,
+        "caseId": "case_mu08q0tt_h",
+        "createdAt": 1789329731831,
+        "id": "cost_mu08q19z_l",
+        "maximumUsd": 0.004616,
+        "status": "settled"
+      }
+    ],
+    "phase": "INVESTIGATING",
+    "publications": 0,
+    "tasks": [
+      {
+        "error": null,
+        "id": "job_mu08q0tt_i",
+        "kind": "triage",
+        "status": "completed",
+        "workflowId": "jd7avv0289p6e1c24afqxz7kjx8ea4hy"
+      },
+      {
+        "error": null,
+        "id": "job_mu08q3lj_m",
+        "kind": "reproduce",
+        "status": "running",
+        "workflowId": "jd74an22z6xmjtvz6rzc53hgq58eb1dh"
+      }
+    ]
+  },
+  "newCalls": [
+    {
+      "actualUsd": 0.000359,
+      "caseId": "case_mu08q0tt_h",
+      "createdAt": 1789329731831,
+      "id": "cost_mu08q19z_l",
+      "maximumUsd": 0.004616,
+      "status": "settled"
+    }
+  ],
+  "spentUsd": 0.000359,
+  "retainedUnknownUsd": 0,
+  "publicationAttempted": false
+}

@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-13T22:51:34.033Z",
+  "deployment": "https://resilient-perch-131.convex.cloud",
+  "table": "demoControlStates",
+  "mode": "demo",
+  "seededCases": 39,
+  "importedReports": 168,
+  "personas": 3,
+  "liveCases": 0,
+  "liveStateUnchanged": true,
+  "allCasesFixture": true,
+  "importedRunStatus": "completed"
+}

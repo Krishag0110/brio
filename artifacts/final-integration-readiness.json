@@ -1,0 +1,135 @@
+{
+  "generatedAt": "2026-09-13T22:23:30.333Z",
+  "scope": "read-only final hosted integration audit; no browser/social/Slack mutations by this agent",
+  "hosted": {
+    "appUrl": "https://mend-hackathon.vercel.app",
+    "deploymentId": "dpl_BXDqW34ib72uTQoTVsCCfbgXY3m4",
+    "deploymentReady": true,
+    "unauthenticatedControlStatus": 403,
+    "authenticatedControlStatus": 200,
+    "mode": "live",
+    "casesCount": 0,
+    "readiness": {
+      "configured": [
+        "openai",
+        "access",
+        "convex",
+        "slack",
+        "linear",
+        "github",
+        "vercel",
+        "worker"
+      ],
+      "intentionallyMissing": [
+        "reddit"
+      ]
+    },
+    "nextPublicConvexUrlMatchesResilient": true,
+    "controlOriginMatchesHosted": true
+  },
+  "slack": {
+    "appId": "A0C1N1T82UU",
+    "teamId": "T0C1G4Z2H5L",
+    "callbackUrl": "https://resilient-perch-131.convex.site/slack/interactions",
+    "callbackPersistedByBrowserReload": true,
+    "signedNonActionProbe": "passed: production returned 403 slack_context_denied after accepting signature and rejecting unsupported probe type",
+    "channelIdPresent": true,
+    "engineerRole": "Ellen / U0C1L62486M",
+    "marketerRole": "David / U0C1DJRE4KF",
+    "manualGate": "Actual engineer/marketer Slack approval buttons are still required during live workflow execution."
+  },
+  "convex": {
+    "cloudUrl": "https://resilient-perch-131.convex.cloud",
+    "siteUrl": "https://resilient-perch-131.convex.site",
+    "fdeBaseShaPresent": true,
+    "socialPollingEnabled": false,
+    "envNamePresence": {
+      "slackAndLinear": true,
+      "workerUrlsAndSecrets": true,
+      "githubControllerSha": true,
+      "vercelReleaseVariables": true,
+      "xAutomationPermissionConfirmedNameVisible": true,
+      "exactTarget": "vinay-chamola:mend-hackathon:production",
+      "exactTargetAudit": {
+        "command": "/home/big-daddy/.bun/bin/bun --no-env-file x --no-install convex env --deployment vinay-chamola:mend-hackathon:production list --names-only",
+        "timestampUtc": "2026-09-13T22:25:01Z",
+        "checked": {
+          "GITHUB_CONTROLLER_SHA": true,
+          "VERCEL_TOKEN": true,
+          "VERCEL_PROJECT_ID": true,
+          "VERCEL_PROJECT_NAME": true,
+          "WEATHER_PRODUCTION_DOMAIN": true,
+          "X_AUTOMATION_PERMISSION_CONFIRMED": true
+        },
+        "namesCount": 41
+      }
+    }
+  },
+  "workers": {
+    "social": {
+      "url": "https://mend-social-worker-ajmx2yigqq-uc.a.run.app",
+      "healthOk": true,
+      "revision": "mend-social-worker-00004-77f",
+      "trafficPercent": 100,
+      "xPlatformPermissionApproved": true,
+      "workerSetupPending": false,
+      "reimportedAccount": "@Vinaychamoc5",
+      "externalXApprovalIndependentlyVerified": false,
+      "noTestPost": true
+    },
+    "engineering": {
+      "url": "https://mend-weather-verifier-ajmx2yigqq-uc.a.run.app",
+      "healthOk": true,
+      "revision": "mend-weather-verifier-00003-s98",
+      "trafficPercent": 100,
+      "workerSetupPending": false,
+      "acceptsSignedDeploymentHosts": true
+    }
+  },
+  "github": {
+    "controllerRepo": "Aarush-Dubey/hackathon",
+    "controllerMainPinnedSha": "8a7636e2709d039773afa73857e6cb66f08a7d6f",
+    "environments": {
+      "engineering-controller": {
+        "convexSiteUrlMatches": true,
+        "weatherTargetRepository": "Aarush-Dubey/hackathon-weather",
+        "requiredSecretsPresent": [
+          "ENGINEERING_GRANT_SECRET",
+          "ENGINEERING_CALLBACK_SECRET",
+          "WEATHER_REPO_READ_SSH_KEY"
+        ],
+        "codingSandboxImageImmutable": true,
+        "codingSandboxWifPresent": true
+      },
+      "engineering-pr-writer": {
+        "convexSiteUrlMatches": true,
+        "weatherDefaultBranch": "main",
+        "weatherChecksAppIdPresent": true,
+        "requiredSecretsPresent": [
+          "ENGINEERING_CALLBACK_SECRET",
+          "WEATHER_CHECKS_APP_PRIVATE_KEY",
+          "WEATHER_PR_TOKEN"
+        ]
+      }
+    }
+  },
+  "weather": {
+    "productionDeploymentId": "dpl_2j3VMkCbdSJtAh565FdkXpu76PGK",
+    "mainSha": "161835dba251f9739d25194ec21db0f2461df989",
+    "baselineChecks": 34,
+    "exactIdentityVerified": true
+  },
+  "manualGates": [
+    "Slack engineer/marketer approval button clicks during live workflow execution",
+    "External X platform approval is stated as not independently verified; no test post was sent",
+    "Reddit remains intentionally disabled/deferred"
+  ],
+  "concreteBlockers": [],
+  "notes": [
+    "No secret values are included in this artifact.",
+    "Corrected exact-target Convex env audit found no configuration blocker for GITHUB_CONTROLLER_SHA or Vercel release variables.",
+    "Exact-target Convex env audit also confirms X_AUTOMATION_PERMISSION_CONFIRMED is present."
+  ],
+  "correctedAt": "2026-09-13T22:25:40.023Z",
+  "correctionReason": "Initial Convex env-name check used the local default production target, which did not match the deployed target. Exact target re-check showed release env names present."
+}

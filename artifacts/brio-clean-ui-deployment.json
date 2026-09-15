@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-13T23:21:57.747Z",
+  "origin": "https://mend-hackathon.vercel.app",
+  "sourceRevision": "6fe60716e04730513fefe20fdc0614340a3b02b4",
+  "deploymentId": "dpl_CsJGnh9u4YUvWHTNPsy1i2475YJS",
+  "pages": [
+    {
+      "route": "/dashboard",
+      "labelsRemoved": true
+    },
+    {
+      "route": "/cases",
+      "labelsRemoved": true
+    }
+  ],
+  "cases": 41,
+  "pageErrors": 0,
+  "workflowPlaybackAvailable": true
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "Aarush-Dubey/hackathon",
+    "branchProtectionConfigured": true
+  },
+  {
+    "repository": "Aarush-Dubey/hackathon-weather",
+    "branchProtectionConfigured": true
+  }
+]

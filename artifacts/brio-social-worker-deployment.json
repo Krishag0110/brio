@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-09-13T22:32:07.619994+00:00",
+  "productName": "brio",
+  "sourceRevision": "872c22676bf8b7eef6385efc179bd1da804f3655",
+  "cloudBuildId": "e31a15fd-5a36-4c02-903c-1ce57a415aa1",
+  "cloudBuildStatus": "SUCCESS",
+  "cloudBuildLocation": "global",
+  "projectId": "mend-hackathon-260914",
+  "runtimeRegion": "us-central1",
+  "service": "mend-social-worker",
+  "revision": "mend-social-worker-00005-6wc",
+  "image": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/social@sha256:43f5b42b1a25543497a9e32fe187b4ebd67724d65cdd71da69d64e41132ec7e7",
+  "imageDigest": "sha256:43f5b42b1a25543497a9e32fe187b4ebd67724d65cdd71da69d64e41132ec7e7",
+  "traffic": [
+    {
+      "latestRevision": true,
+      "percent": 100,
+      "revisionName": "mend-social-worker-00005-6wc"
+    }
+  ],
+  "health": {
+    "url": "https://mend-social-worker-ajmx2yigqq-uc.a.run.app/health",
+    "status": 200,
+    "ok": true,
+    "ms": 565,
+    "body": {
+      "status": "ok",
+      "implementation": "experimental",
+      "queue": "convex",
+      "livePermission": "configured_unverified"
+    }
+  },
+  "environmentAndSecretReferencesPreserved": true,
+  "scalingPreserved": true,
+  "xAutomationEnabled": true,
+  "publicPostsSent": 0,
+  "verifierRedeployed": false
+}

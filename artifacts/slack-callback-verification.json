@@ -1,0 +1,17 @@
+{
+  "appId": "A0C1N1T82UU",
+  "callbackUrl": "https://resilient-perch-131.convex.site/slack/interactions",
+  "interactivityEnabled": true,
+  "requestUrlMatches": true,
+  "requestUrlVisible": true,
+  "saveDisabled": true,
+  "teamId": "T0C1G4Z2H5L",
+  "verifiedPath": "/apps/A0C1N1T82UU/interactive-messages",
+  "verifiedAt": "2026-09-13T21:59:42.088Z",
+  "socketMode": {
+    "enabled": false,
+    "verifiedBy": "root browser reload before interactivity configuration"
+  },
+  "unsignedCallbackStatus": 403,
+  "liveApprovalTestPerformed": false
+}

@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-13T21:39:43.597437+00:00",
+  "url": "http://127.0.0.1:3002/cases",
+  "mode": "demo",
+  "cases": 38,
+  "reports": 167,
+  "revision": 36,
+  "unitIntegration": {
+    "passed": 493,
+    "files": 32
+  },
+  "productionBrowser": {
+    "passed": 22,
+    "failed": 0,
+    "duration": "1.0m"
+  },
+  "lint": "passed",
+  "typecheck": "passed",
+  "isolatedProductionBuild": "passed",
+  "runtime": {
+    "get_compilation_issues": {
+      "issues": []
+    },
+    "get_errors": {
+      "configErrors": [],
+      "sessionErrors": []
+    }
+  },
+  "reactInspectSuccess": true,
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "documentWidth": 375,
+    "horizontalOverflow": false
+  },
+  "screenshots": [
+    "seed-board.png",
+    "seed-dashboard.png",
+    "seed-persona-reply.png",
+    "seed-persona-mobile.png"
+  ],
+  "providerActions": false
+}

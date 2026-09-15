@@ -1,0 +1,95 @@
+{
+  "recordedAt": "2026-09-13T21:56:08.085188+00:00",
+  "project": "mend-hackathon-260914",
+  "region": "us-central1",
+  "sourceRevision": "296f8d477b55c3c7233324b467d74f599727bb24",
+  "sourceNote": "Dockerfile and runtime dependency files come from sourceRevision; dedicated build YAML is included with this evidence for review.",
+  "sourceFiles": {
+    "workers/engineering/Dockerfile": "e60b8572427f90898cdc4bd8b208ad4f58965070970c517bbcbb1974ae6db0b3",
+    "workers/engineering/runtime/package.json": "54f67669c7b70102aaa24300fbe6125d0d9a555e5a1585245fe53a0b447b5629",
+    "workers/engineering/runtime/bun.lock": "b0f10e86bcc302fa6a9cee515ab0fd9c2cc89e8fe803eae34e490b9e4ddb8f04",
+    "workers/gcp/cloudbuild-engineering.yaml": "37f232ad3da0860d6724deee3ea6fe65011d2ba785f2199fee0e902dad7b90a4"
+  },
+  "build": {
+    "id": "236bfb42-2cdf-4a16-97b3-31bad5f84d2d",
+    "status": "SUCCESS",
+    "createTime": "2026-09-13T21:53:19.392736707Z",
+    "finishTime": "2026-09-13T21:55:20.554959Z",
+    "logUrl": "https://console.cloud.google.com/cloud-build/builds;region=us-central1/236bfb42-2cdf-4a16-97b3-31bad5f84d2d?project=428020372764",
+    "serviceAccount": "projects/mend-hackathon-260914/serviceAccounts/mend-build@mend-hackathon-260914.iam.gserviceaccount.com"
+  },
+  "image": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/engineering@sha256:91a62c50361609ac5f1f2ffbf6d2e2e93568301b9df7954d75784c261eec52e4",
+  "artifactRegistryDescription": {
+    "image_summary": {
+      "digest": "sha256:91a62c50361609ac5f1f2ffbf6d2e2e93568301b9df7954d75784c261eec52e4",
+      "fully_qualified_digest": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/engineering@sha256:91a62c50361609ac5f1f2ffbf6d2e2e93568301b9df7954d75784c261eec52e4",
+      "registry": "us-central1-docker.pkg.dev",
+      "repository": "mend-workers",
+      "slsa_build_level": "unknown"
+    }
+  },
+  "runtimeSmoke": {
+    "bun": "1.4.2",
+    "uid": 65532,
+    "network": "none",
+    "rootFilesystem": "read-only",
+    "dockerSocket": false,
+    "chromium": "153.0.8010.12",
+    "browserSmoke": "passed"
+  },
+  "github": {
+    "repository": "Aarush-Dubey/hackathon",
+    "environment": "engineering-controller",
+    "variables": {
+      "CODING_SANDBOX_IMAGE": "us-central1-docker.pkg.dev/mend-hackathon-260914/mend-workers/engineering@sha256:91a62c50361609ac5f1f2ffbf6d2e2e93568301b9df7954d75784c261eec52e4",
+      "CODING_SANDBOX_READER_SERVICE_ACCOUNT": "mend-sandbox-reader@mend-hackathon-260914.iam.gserviceaccount.com",
+      "CODING_SANDBOX_WIF_PROVIDER": "projects/428020372764/locations/global/workloadIdentityPools/mend-github/providers/engineering-controller"
+    },
+    "authAction": "google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093",
+    "workflowLint": "actionlint v1.7.12 passed",
+    "workflowShellSyntax": "passed",
+    "localPullSimulation": {
+      "immutableReferenceChecks": "passed",
+      "missingWifRejected": true,
+      "temporaryCredentialsRemovedOnSuccess": true,
+      "temporaryCredentialsRemovedOnFailure": true
+    },
+    "liveOidcPullVerified": false,
+    "signedCandidateBuildVerified": false
+  },
+  "workloadIdentityProvider": {
+    "attributeCondition": "assertion.repository_owner_id == '185852550' && assertion.repository_id == '1368688745' && assertion.ref == 'refs/heads/main' && assertion.workflow_ref == 'Aarush-Dubey/hackathon/.github/workflows/restricted-coding.yml@refs/heads/main' && assertion.sub == 'repo:Aarush-Dubey/hackathon:environment:engineering-controller'",
+    "attributeMapping": {
+      "attribute.ref": "assertion.ref",
+      "attribute.repository_id": "assertion.repository_id",
+      "attribute.repository_owner_id": "assertion.repository_owner_id",
+      "attribute.workflow_ref": "assertion.workflow_ref",
+      "google.subject": "assertion.sub"
+    },
+    "displayName": "Reviewed engineering workflow",
+    "name": "projects/428020372764/locations/global/workloadIdentityPools/mend-github/providers/engineering-controller",
+    "oidc": {
+      "issuerUri": "https://token.actions.githubusercontent.com"
+    },
+    "state": "ACTIVE"
+  },
+  "registryIamBindings": [
+    {
+      "members": [
+        "serviceAccount:mend-sandbox-reader@mend-hackathon-260914.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.reader"
+    },
+    {
+      "members": [
+        "serviceAccount:mend-build@mend-hackathon-260914.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.writer"
+    }
+  ],
+  "userManagedServiceAccountKeysCreated": false,
+  "remainingDependencies": [
+    "Review and merge the controller workflow changes to main.",
+    "Run a current signed engineering Build on the protected controller branch to verify GitHub OIDC image pull and the full candidate verification flow."
+  ]
+}

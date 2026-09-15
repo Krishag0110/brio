@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-13T22:21:25.036Z",
+  "account": "Vinaychamoc5",
+  "enabled": true,
+  "authorizationSource": "Explicit account-owner instruction in this task",
+  "externalPlatformApproval": "not independently verified",
+  "importHttpStatus": 200,
+  "connection": {
+    "account": "Vinaychamoc5",
+    "detail": "Identity verified; owner configured platform permission.",
+    "id": "x",
+    "lastCheckedAt": "2026-09-13T22:21:24.358Z",
+    "paused": false,
+    "platform": "x",
+    "status": "ready"
+  },
+  "workerHealth": {
+    "status": "ok",
+    "implementation": "experimental",
+    "queue": "convex",
+    "livePermission": "configured_unverified"
+  },
+  "backgroundPollingEnabled": false,
+  "testPublicationSent": false,
+  "approvalRulesPreserved": true
+}
