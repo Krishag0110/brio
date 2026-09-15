@@ -1,0 +1,114 @@
+{
+  "get_project_metadata": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"projectPath\":\"/home/big-daddy/Desktop/hackathon\",\"devServerUrl\":\"http://127.0.0.1:3002\"}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_project_metadata"
+    }
+  ],
+  "get_compilation_issues": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"issues\":[]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_compilation_issues"
+    }
+  ],
+  "get_routes": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"appRouter\": [\n    \"/\",\n    \"/access\",\n    \"/api/access\",\n    \"/api/agent\",\n    \"/api/connections/x/import\",\n    \"/api/control\",\n    \"/api/control/stream\",\n    \"/api/persona/test\",\n    \"/cases\",\n    \"/cases/[caseId]\",\n    \"/connections\",\n    \"/controls\",\n    \"/dashboard\",\n    \"/favicon.ico\",\n    \"/persona\"\n  ]\n}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_routes"
+    }
+  ],
+  "get_errors": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"configErrors\":[],\"sessionErrors\":[]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_errors"
+    }
+  ],
+  "get_page_metadata": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"sessions\":[{\"url\":\"/\",\"routerType\":\"app\",\"segments\":[{\"path\":\"app/layout.tsx\",\"type\":\"layout\",\"isBoundary\":false,\"isBuiltin\":false},{\"path\":\"global-error.js\",\"type\":\"boundary:global-error\",\"isBoundary\":true,\"isBuiltin\":true},{\"path\":\"not-found.js\",\"type\":\"boundary:not-found\",\"isBoundary\":true,\"isBuiltin\":true},{\"path\":\"app/page.tsx\",\"type\":\"page\",\"isBoundary\":false,\"isBuiltin\":false}]}]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_page_metadata"
+    }
+  ],
+  "final_get_compilation_issues": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"issues\":[]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_compilation_issues"
+    }
+  ],
+  "final_get_errors": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"configErrors\":[],\"sessionErrors\":[]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_errors"
+    }
+  ],
+  "final_get_page_metadata": [
+    {
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"sessions\":[{\"url\":\"/cases/case_mu09uehu_u\",\"routerType\":\"app\",\"segments\":[{\"path\":\"app/layout.tsx\",\"type\":\"layout\",\"isBoundary\":false,\"isBuiltin\":false},{\"path\":\"global-error.js\",\"type\":\"boundary:global-error\",\"isBoundary\":true,\"isBuiltin\":true},{\"path\":\"not-found.js\",\"type\":\"boundary:not-found\",\"isBoundary\":true,\"isBuiltin\":true},{\"path\":\"app/cases/[caseId]/page.tsx\",\"type\":\"page\",\"isBoundary\":false,\"isBuiltin\":false}]}]}"
+          }
+        ]
+      },
+      "jsonrpc": "2.0",
+      "id": "get_page_metadata"
+    }
+  ]
+}
