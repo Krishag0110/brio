@@ -1,0 +1,20 @@
+.env*
+**/.env*
+.git
+node_modules
+**/node_modules
+.next
+**/.next
+.next-*
+**/.next-*
+.data
+.convex
+artifacts
+test-results
+playwright-report
+**/candidate-output
+*.tsbuildinfo
+
+# Also exclude non-dot environment bundles placed below the source tree.
+**/*.env
+**/*.env.*

@@ -1,0 +1,20 @@
+# Cloud Build needs only the worker source and its build configuration.
+*
+!workers/
+!workers/**
+# Keep nested local data and credentials out even if added under workers later.
+**/node_modules/
+**/.env*
+**/.git/
+**/.data/
+**/.next*/
+**/artifacts/
+**/candidate-output/
+**/*.pem
+**/*.key
+**/*credentials*.json
+**/*service-account*.json
+
+# Also exclude non-dot environment bundles placed below the source tree.
+**/*.env
+**/*.env.*
