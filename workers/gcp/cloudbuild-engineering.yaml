@@ -1,0 +1,57 @@
+# Build the reviewed runtime only; no candidate source or application secrets.
+substitutions:
+  _REGION: us-central1
+  _REPOSITORY: mend-workers
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --platform=linux/amd64
+      - -f
+      - workers/engineering/Dockerfile
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/engineering:$BUILD_ID
+      - .
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - run
+      - --rm
+      - --init
+      - --network=none
+      - --read-only
+      - --cap-drop=ALL
+      - --security-opt=no-new-privileges
+      - --pids-limit=256
+      - --memory=2g
+      - --cpus=2
+      - --user=65532:65532
+      - --tmpfs=/tmp:rw,nosuid,nodev,size=256m
+      - --env=HOME=/tmp
+      - --env=NEXT_TELEMETRY_DISABLED=1
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/engineering:$BUILD_ID
+      - node
+      - --input-type=module
+      - -e
+      - |
+        import assert from 'node:assert/strict';
+        import fs from 'node:fs';
+        import os from 'node:os';
+        import { execFileSync } from 'node:child_process';
+        import { chromium } from '/runtime/node_modules/playwright/index.mjs';
+        assert.equal(execFileSync('/usr/local/bin/bun', ['--version'], { encoding: 'utf8' }).trim(), '1.4.2');
+        assert.equal(process.getuid(), 65532);
+        assert.deepEqual(Object.keys(os.networkInterfaces()), ['lo']);
+        assert.throws(() => fs.writeFileSync('/sandbox-smoke-write', 'must fail'));
+        assert.equal(fs.existsSync('/var/run/docker.sock'), false);
+        const browser = await chromium.launch({ headless: true });
+        try {
+          const page = await browser.newPage();
+          await page.setContent('<h1>Offline sandbox runtime ready</h1>');
+          assert.equal(await page.locator('h1').textContent(), 'Offline sandbox runtime ready');
+          console.log(JSON.stringify({ bun: '1.4.2', uid: process.getuid(), network: 'none', rootFilesystem: 'read-only', dockerSocket: false, chromium: browser.version(), browserSmoke: 'passed' }));
+        } finally { await browser.close(); }
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/engineering:$BUILD_ID
+timeout: 1200s
+options:
+  logging: CLOUD_LOGGING_ONLY

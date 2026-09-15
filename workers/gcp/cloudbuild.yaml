@@ -1,0 +1,29 @@
+# Build the two existing worker Dockerfiles; no application secrets enter Cloud Build.
+substitutions:
+  _REGION: us-central1
+  _REPOSITORY: mend-workers
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --platform=linux/amd64
+      - -f
+      - workers/social/Dockerfile
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/social:$BUILD_ID
+      - .
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --platform=linux/amd64
+      - -f
+      - workers/engineering/Verifier.Dockerfile
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/verifier:$BUILD_ID
+      - .
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/social:$BUILD_ID
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/verifier:$BUILD_ID
+timeout: 1200s
+options:
+  logging: CLOUD_LOGGING_ONLY
