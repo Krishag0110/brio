@@ -1,0 +1,230 @@
+{
+  "suiteVersion": "weather-protected-v1",
+  "runId": "protected-baseline-browser",
+  "url": "http://127.0.0.1:33239",
+  "mode": "fixture",
+  "timestamp": 1789332866371,
+  "identityPassed": true,
+  "checks": [
+    {
+      "name": "default Celsius",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    },
+    {
+      "name": "pleasant Celsius",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    },
+    {
+      "name": "pleasant Fahrenheit",
+      "expected": "68°F",
+      "actual": "20°F",
+      "passed": false
+    },
+    {
+      "name": "pleasant repeat 1 Celsius",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    },
+    {
+      "name": "pleasant repeat 1 Fahrenheit",
+      "expected": "68°F",
+      "actual": "20°F",
+      "passed": false
+    },
+    {
+      "name": "pleasant repeat 2 Celsius",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    },
+    {
+      "name": "pleasant repeat 2 Fahrenheit",
+      "expected": "68°F",
+      "actual": "20°F",
+      "passed": false
+    },
+    {
+      "name": "pleasant repeat 3 Celsius",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    },
+    {
+      "name": "pleasant repeat 3 Fahrenheit",
+      "expected": "68°F",
+      "actual": "20°F",
+      "passed": false
+    },
+    {
+      "name": "freezing Celsius",
+      "expected": "0°C",
+      "actual": "0°C",
+      "passed": true
+    },
+    {
+      "name": "freezing Fahrenheit",
+      "expected": "32°F",
+      "actual": "0°F",
+      "passed": false
+    },
+    {
+      "name": "freezing repeat 1 Celsius",
+      "expected": "0°C",
+      "actual": "0°C",
+      "passed": true
+    },
+    {
+      "name": "freezing repeat 1 Fahrenheit",
+      "expected": "32°F",
+      "actual": "0°F",
+      "passed": false
+    },
+    {
+      "name": "freezing repeat 2 Celsius",
+      "expected": "0°C",
+      "actual": "0°C",
+      "passed": true
+    },
+    {
+      "name": "freezing repeat 2 Fahrenheit",
+      "expected": "32°F",
+      "actual": "0°F",
+      "passed": false
+    },
+    {
+      "name": "freezing repeat 3 Celsius",
+      "expected": "0°C",
+      "actual": "0°C",
+      "passed": true
+    },
+    {
+      "name": "freezing repeat 3 Fahrenheit",
+      "expected": "32°F",
+      "actual": "0°F",
+      "passed": false
+    },
+    {
+      "name": "extreme-cold Celsius",
+      "expected": "-40°C",
+      "actual": "-40°C",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold Fahrenheit",
+      "expected": "-40°F",
+      "actual": "-40°F",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 1 Celsius",
+      "expected": "-40°C",
+      "actual": "-40°C",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 1 Fahrenheit",
+      "expected": "-40°F",
+      "actual": "-40°F",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 2 Celsius",
+      "expected": "-40°C",
+      "actual": "-40°C",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 2 Fahrenheit",
+      "expected": "-40°F",
+      "actual": "-40°F",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 3 Celsius",
+      "expected": "-40°C",
+      "actual": "-40°C",
+      "passed": true
+    },
+    {
+      "name": "extreme-cold repeat 3 Fahrenheit",
+      "expected": "-40°F",
+      "actual": "-40°F",
+      "passed": true
+    },
+    {
+      "name": "boiling Celsius",
+      "expected": "100°C",
+      "actual": "100°C",
+      "passed": true
+    },
+    {
+      "name": "boiling Fahrenheit",
+      "expected": "212°F",
+      "actual": "100°F",
+      "passed": false
+    },
+    {
+      "name": "boiling repeat 1 Celsius",
+      "expected": "100°C",
+      "actual": "100°C",
+      "passed": true
+    },
+    {
+      "name": "boiling repeat 1 Fahrenheit",
+      "expected": "212°F",
+      "actual": "100°F",
+      "passed": false
+    },
+    {
+      "name": "boiling repeat 2 Celsius",
+      "expected": "100°C",
+      "actual": "100°C",
+      "passed": true
+    },
+    {
+      "name": "boiling repeat 2 Fahrenheit",
+      "expected": "212°F",
+      "actual": "100°F",
+      "passed": false
+    },
+    {
+      "name": "boiling repeat 3 Celsius",
+      "expected": "100°C",
+      "actual": "100°C",
+      "passed": true
+    },
+    {
+      "name": "boiling repeat 3 Fahrenheit",
+      "expected": "212°F",
+      "actual": "100°F",
+      "passed": false
+    },
+    {
+      "name": "reload/default unit",
+      "expected": "20°C",
+      "actual": "20°C",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "/home/big-daddy/Desktop/hackathon/tests/execution/artifacts/protected-baseline-browser-20c-toggle.png",
+    "/home/big-daddy/Desktop/hackathon/tests/execution/artifacts/protected-baseline-browser-reload.png"
+  ],
+  "status": "failed",
+  "seededDefectReproduced": true,
+  "provenance": {
+    "schemaVersion": 1,
+    "runId": "local-seeded-demo",
+    "candidateId": "seeded-baseline",
+    "headSha": "local-uncommitted",
+    "treeDigest": "local-uncommitted",
+    "trustedTestRevision": "weather-protected-v1",
+    "buildConfigRevision": "weather-build-v1",
+    "mode": "fixture"
+  }
+}
