@@ -1,0 +1,122 @@
+name: Validate reviewed weather Bun bootstrap
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reviewed-weather-bun-bootstrap
+  cancel-in-progress: false
+jobs:
+  validate-bootstrap:
+    if: github.ref == 'refs/heads/main' && github.repository == 'Aarush-Dubey/hackathon'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: engineering-controller
+    defaults:
+      run:
+        working-directory: controller
+    env:
+      WEATHER_TARGET_PATH: ${{ github.workspace }}/weather-target
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: controller
+          persist-credentials: false
+      - name: Require existing read-only target access
+        env:
+          WEATHER_REPO_READ_SSH_KEY: ${{ secrets.WEATHER_REPO_READ_SSH_KEY }}
+          WEATHER_REPO_READ_TOKEN: ${{ secrets.WEATHER_REPO_READ_TOKEN }}
+        run: |
+          if [ -z "$WEATHER_REPO_READ_SSH_KEY" ] && [ -z "$WEATHER_REPO_READ_TOKEN" ]; then
+            echo '::error::Configure the weather read-only deploy key or read token.'
+            exit 1
+          fi
+      - name: Check out only the reviewed Bun migration
+        uses: actions/checkout@v4
+        with:
+          repository: Aarush-Dubey/hackathon-weather
+          ref: a96c50ee70b0a97171b03cde8ea10df6a2f008c8
+          fetch-depth: 0
+          path: weather-target
+          ssh-key: ${{ secrets.WEATHER_REPO_READ_SSH_KEY }}
+          token: ${{ secrets.WEATHER_REPO_READ_TOKEN || github.token }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.4.2"
+      - run: bun install --frozen-lockfile --ignore-scripts
+      - name: Verify fixed revisions, five-file scope, and unchanged seeded source
+        run: node --import tsx workers/engineering/bootstrap-cli.ts source
+      - name: Install reviewed weather lock without lifecycle scripts
+        run: bun install --cwd "$WEATHER_TARGET_PATH" --frozen-lockfile --ignore-scripts
+      - name: Build the reviewed Bun baseline
+        run: bun run --cwd "$WEATHER_TARGET_PATH" build
+      - name: Typecheck the reviewed baseline
+        run: bun run --cwd "$WEATHER_TARGET_PATH" typecheck
+      - run: bun run --no-install playwright install --with-deps chromium
+      - name: Prove the seeded defect and protected fixtures remain unchanged
+        run: bun run --no-env-file --no-install vitest run tests/execution/weather-browser.test.ts
+      - name: Record truthful bootstrap evidence after all checks succeed
+        run: node --import tsx workers/engineering/bootstrap-cli.ts receipt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-bun-bootstrap-evidence
+          path: |
+            controller/bootstrap-output/
+            controller/tests/execution/artifacts/protected-baseline-browser-*
+          retention-days: 7
+  attach-bootstrap-check:
+    needs: validate-bootstrap
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: engineering-pr-writer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.4.2"
+      - run: bun install --frozen-lockfile --ignore-scripts
+      - uses: actions/download-artifact@v4
+        with:
+          name: reviewed-bun-bootstrap-evidence
+          path: downloaded-bootstrap
+      - name: Restore the trusted same-run receipt
+        run: |
+          mkdir -p bootstrap-output
+          cp downloaded-bootstrap/bootstrap-output/validation.json bootstrap-output/validation.json
+      - name: Require the installed Checks App or supported check-token fallback
+        env:
+          APP_ID: ${{ vars.WEATHER_CHECKS_APP_ID }}
+          APP_KEY: ${{ secrets.WEATHER_CHECKS_APP_PRIVATE_KEY }}
+          CHECK_TOKEN: ${{ secrets.WEATHER_CHECKS_TOKEN }}
+          PR_READ_TOKEN: ${{ secrets.WEATHER_PR_TOKEN }}
+        run: |
+          test -n "$PR_READ_TOKEN" || { echo '::error::WEATHER_PR_TOKEN is required to read the exact current PR.'; exit 1; }
+          if [ -n "$APP_ID" ]; then
+            test -n "$APP_KEY" || { echo '::error::WEATHER_CHECKS_APP_PRIVATE_KEY is required.'; exit 1; }
+          else
+            test -n "$CHECK_TOKEN" || { echo '::error::Configure WEATHER_CHECKS_APP_ID and WEATHER_CHECKS_APP_PRIVATE_KEY.'; exit 1; }
+          fi
+      - uses: actions/create-github-app-token@v2
+        id: checks-app
+        if: vars.WEATHER_CHECKS_APP_ID != ''
+        with:
+          app-id: ${{ vars.WEATHER_CHECKS_APP_ID }}
+          private-key: ${{ secrets.WEATHER_CHECKS_APP_PRIVATE_KEY }}
+          owner: Aarush-Dubey
+          repositories: hackathon-weather
+          permission-checks: write
+      - name: Attach bootstrap result only to the unchanged reviewed PR head
+        run: node --import tsx workers/engineering/bootstrap-cli.ts publish
+        env:
+          GITHUB_PR_TOKEN: ${{ secrets.WEATHER_PR_TOKEN }}
+          GITHUB_CHECKS_TOKEN: ${{ steps.checks-app.outputs.token || secrets.WEATHER_CHECKS_TOKEN }}
