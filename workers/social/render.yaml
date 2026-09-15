@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: fde-social-worker
+    runtime: docker
+    dockerfilePath: ./workers/social/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: off
+    envVars:
+      - key: CONTROL_APP_ORIGIN
+        sync: false
+      - key: CONVEX_SITE_URL
+        sync: false
+      - key: SOCIAL_GRANT_SECRET
+        sync: false
+      - key: SOCIAL_CALLBACK_SECRET
+        sync: false
+      - key: SESSION_ENCRYPTION_KEY
+        sync: false
+      - key: SESSION_KEY_VERSION
+        value: v1
+      - key: X_PLATFORM_PERMISSION_APPROVED
+        value: "false"
+      - key: REDDIT_API_APPROVED
+        value: "false"
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: REDDIT_REDIRECT_URI
+        sync: false
+      - key: REDDIT_USER_AGENT
+        sync: false
+      - key: REDDIT_ALLOWED_SUBREDDITS
+        sync: false
