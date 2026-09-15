@@ -27,15 +27,8 @@ jobs:
         with:
           path: controller
           persist-credentials: false
-      - name: Require explicit access to the separate protected weather baseline
-        env:
-          WEATHER_REPO_READ_SSH_KEY: ${{ secrets.WEATHER_REPO_READ_SSH_KEY }}
-          WEATHER_REPO_READ_TOKEN: ${{ secrets.WEATHER_REPO_READ_TOKEN }}
+      - name: Validate the immutable public weather baseline
         run: |
-          if [ -z "$WEATHER_REPO_READ_SSH_KEY" ] && [ -z "$WEATHER_REPO_READ_TOKEN" ]; then
-            echo '::error::Configure WEATHER_REPO_READ_SSH_KEY as the read-only weather deploy key, or WEATHER_REPO_READ_TOKEN with target contents read access. Fork PRs without either credential cannot run the private baseline check.'
-            exit 1
-          fi
           if [[ ! "$WEATHER_BASELINE_SHA" =~ ^[a-f0-9]{40}$ ]]; then
             echo '::error::Configure WEATHER_BASELINE_SHA as the reviewed 40-character seeded-baseline commit in the separate weather repository. A moving branch or candidate ref is not accepted.'
             exit 1
